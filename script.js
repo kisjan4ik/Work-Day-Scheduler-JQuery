@@ -7,31 +7,34 @@ $(time).text(moment);
 
 for (let i = 8; i < 19; i++) {
     $("textarea[type=text]").val(function () {
-      let i = "i";
-        return localStorage.getItem(i);
+        let i = "i";
+        return localStorage.getItem("i");
+
     });
-    
+    console.log();
+
 }
 // Click event to save text area content to local storage
 
-$(".saveBtn").on("click", function(event) {
+$(".saveBtn").on("click", function (event) {
     event.preventDefault();
 
     if (typeof (window.localStorage) != "undefined") {
         console.log(this);
-        
-        // $("textarea[type=text]").on("change", function () {
-            localStorage.setItem($(this).data("id"), $("#"+$(this).data("id")).val());
-       
-        console.log($(this).data("id"));
+
+
+        localStorage.setItem($(this).data("id"), $("#" + $(this).data("id")).val());
+
+        console.log($(this).data("id"), $("#" + $(this).data("id")).val());
+
         
         // });
-       
-       
+
+
         // $("textarea[type=text]").val(function () {
         //     return localStorage.getItem(this.id);
         // });
-        
+
     }
 });
 
@@ -41,16 +44,16 @@ $(".saveBtn").on("click", function(event) {
 //     var id = $(this).attr('id');
 //         var value = $(this).val();
 //        localStorage.setItem(id, value);
-        
+
 //     });   
 // });
 
 //     $('textarea[type="text"]').on (function(){    
 //         var id = $(this).attr('id');
 //         var value = localStorage.getItem(id);
-        
+
 //         $(this).val(value);
-        
+
 //     }); 
 
 
