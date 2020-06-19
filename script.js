@@ -5,11 +5,13 @@ var time = $("#currentDay");
 
 $(time).text(moment);
 
+// When app opens, display content for each time block from local storage.
+// it can be done with a loop (more efficient) or by tagreting each time a block sepaprately
+
 for (let i = 8; i < 19; i++) {
-    $("#"+ i).val(localStorage.getItem(i));
+    $("#" + i).val(localStorage.getItem(i));
 
- console.log(localStorage.getItem(i));
-
+    console.log(localStorage.getItem(i));
 }
 // Click event to save text area content to local storage
 
@@ -19,45 +21,12 @@ $(".saveBtn").on("click", function (event) {
     if (typeof (window.localStorage) != "undefined") {
         console.log(this);
 
-
         localStorage.setItem($(this).data("id"), $("#" + $(this).data("id")).val());
 
         console.log($(this).data("id"), $("#" + $(this).data("id")).val());
-
-        
-        // });
-
-
-        // $("textarea[type=text]").val(function () {
-        //     return localStorage.getItem(this.id);
-        // });
-
     }
 });
 
-// $(".saveBtn").on("click", function() {
-
-//    $('textarea[type ="text"]').each(function(){
-//     var id = $(this).attr('id');
-//         var value = $(this).val();
-//        localStorage.setItem(id, value);
-
-//     });   
-// });
-
-//     $('textarea[type="text"]').on (function(){    
-//         var id = $(this).attr('id');
-//         var value = localStorage.getItem(id);
-
-//         $(this).val(value);
-
-//     }); 
-
-
-
-
-// When app opens, display content for each time block from local storage.
-// it can be done with a loop (more efficient) or by tagreting each time a block sepaprately
 
 // change time block background color depending on the current hour (past, present and future)
 
