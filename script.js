@@ -35,35 +35,35 @@ $(".saveBtn").on("click", function (event) {
 // change time block background color depending on the current hour (past, present and future)
 
 var currentTime = moment().hours();
-    console.log(currentTime);
+console.log(currentTime);
 
-    var changeColor = $(".col-8");
-    var planTime = $(".hour")
+var changeColor = $(".col-8");
+var planTime = $(".hour")
 
 for (let i = 8; i <= 19; i++) {
 
-    planTime = (i);
-    console.log(planTime);
-    
-    if (currentTime == planTime) {
+let currentColor = (changeColor.id = i) 
+if (currentTime === currentColor) {
+    console.log(currentColor);
 
-        $(changeColor).css("background-color", "#ff6961", "color", "white")
-
+    $(currentColor).attr ({
+        "class": "present",
+    });
 }
-    }
 
+else if (currentTime < currentColor) {
+    
+    $(currentColor).attr ({
+        "class": "future",
+    });
+} 
 
+else if (currentTime > currentColor) {
+    
 
+    $(currentColor).attr ({
+        "class": "past",
+    });
+} 
+}
 
-// var plannerTime = $(".hour").textContent;
-
-// console.log(plannerTime)
-
-
-
-// if (currentTime == $(this.data("id"))) {
-//     console.log(this.data("id"));
-
-//     $("textarea").addClass("present")
-
-// }
