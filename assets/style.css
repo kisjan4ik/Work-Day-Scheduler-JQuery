@@ -4,7 +4,7 @@ body {
   line-height: 1;
 }
 
-textarea{
+textarea {
   padding-top: 30px;
   padding-right: 0px;
   height: 75px;
@@ -24,11 +24,11 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-.description{
+.description {
   white-space: pre-wrap;
 }
 
-.time-block{
+.time-block {
   text-align: center;
  
 }

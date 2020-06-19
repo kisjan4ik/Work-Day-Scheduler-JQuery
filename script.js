@@ -1,9 +1,15 @@
 // display the current time using moment js
-var moment = moment().format("MMMM Do YYYY");
+var moment = moment().format("MMMM Do YYYY, h a");
+var currentTime = moment().format("MMMM Do YYYY, h:mm:ss a");
+
+console.log(currentTime);
 
 var time = $("#currentDay");
 
 $(time).text(moment);
+
+
+
 
 // When app opens, display content for each time block from local storage.
 // it can be done with a loop (more efficient) or by tagreting each time a block sepaprately
@@ -27,6 +33,15 @@ $(".saveBtn").on("click", function (event) {
     }
 });
 
-
 // change time block background color depending on the current hour (past, present and future)
 
+
+
+
+// for (let i = 8; i < 19; i++) {
+// var textarea = $("#")
+//   if (moment.h == i) {
+//       $(<textarea></textarea>).classList.add("present");
+//   }
+    
+// }
