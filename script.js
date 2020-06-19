@@ -6,12 +6,9 @@ var time = $("#currentDay");
 $(time).text(moment);
 
 for (let i = 8; i < 19; i++) {
-    $("textarea[type=text]").val(function () {
-        let i = "i";
-        return localStorage.getItem("i");
+    $("#"+ i).val(localStorage.getItem(i));
 
-    });
-    console.log();
+ console.log(localStorage.getItem(i));
 
 }
 // Click event to save text area content to local storage
