@@ -2,8 +2,11 @@
 
 ## Description 
 
-The Daily planner application was created usin JQuery tools and Minute.js. The purpose of the project was to create application using jquery tools on order to store data to the local storage, to implement time tracking function and to change data based on the current time.
+The Daily planner application was created usin JQuery tools and Moment.js. The purpose of the project was to create application using jquery tools on order to store data to the local storage, to implement time tracking function and to change data based on the current time.
 
+## Installation
+
+To create this application I used the moment.js website to be able to track the current time and implement differrent functions based on the time moment. Also I used JQuery to build the application.
 
 ## Usage 
 
