@@ -37,33 +37,27 @@ $(".saveBtn").on("click", function (event) {
 var currentTime = moment().hours();
 console.log(currentTime);
 
-var changeColor = $(".col-8");
+var changeColor = $("textarea");
 var planTime = $(".hour")
 
 for (let i = 8; i <= 19; i++) {
 
-let currentColor = (changeColor.id = i) 
+let currentColor = (changeColor[i-8].id) 
+ console.log(currentColor);
 if (currentTime === currentColor) {
-    console.log(currentColor);
 
-    $(currentColor).attr ({
-        "class": "present",
-    });
+    $("#"+ currentColor).addClass("present");
 }
 
 else if (currentTime < currentColor) {
     
-    $(currentColor).attr ({
-        "class": "future",
-    });
+    $("#"+ currentColor).addClass("future");
 } 
 
 else if (currentTime > currentColor) {
     
-
-    $(currentColor).attr ({
-        "class": "past",
-    });
+    
+    $("#"+ currentColor).addClass("past");
 } 
 }
 
