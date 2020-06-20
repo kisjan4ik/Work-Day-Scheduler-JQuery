@@ -11,7 +11,7 @@ $(time).text(currentDate);
 // When app opens, display content for each time block from local storage.
 // it can be done with a loop (more efficient) or by tagreting each time a block sepaprately
 
-for (let i = 8; i <= 19; i++) {
+for (let i = 8; i <= 24; i++) {
     $("#" + i).val(localStorage.getItem(i));
 
     console.log(localStorage.getItem(i));
@@ -44,7 +44,7 @@ for (let i = 8; i <= 19; i++) {
 
 let currentColor = (changeColor[i-8].id) 
  console.log(currentColor);
-if (currentTime === currentColor) {
+if (currentTime == currentColor) {
 
     $("#"+ currentColor).addClass("present");
 }
